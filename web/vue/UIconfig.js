@@ -6,15 +6,15 @@
 const CONFIG = {
   headless: false,
   api: {
-    host: 'localhost',
+    host: '104.236.235.143',
     port: 3000,
     timeout: 120000 // 2 minutes
   },
   ui: {
-    ssl: true,
-    host: 'localhost',
+    ssl: false,
+    host:  '104.236.235.143',
     port: 3000,
-    path: '/'
+    path: '/gekkko'
   },
   adapter: 'sqlite'
 }
