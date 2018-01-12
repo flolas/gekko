@@ -14,7 +14,7 @@ const CONFIG = {
     ssl: false,
     host:  '104.236.235.143',
     port: 3000,
-    path: '/gekkko'
+    path: '/'
   },
   adapter: 'sqlite'
 }
