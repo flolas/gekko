@@ -2,16 +2,14 @@
 // var _ = require('lodash');
 var log = require('../core/log.js');
 
-var config = require('../core/util.js').getConfig();
-var settings = config.buyatsellat_ui;
-
 // let's create our own method
 var method = {};
 
 // prepare everything our method needs
-  method.init = function() {
-  this.name = 'buyatsellat_ui';
+method.init = function() {
+  this.name = 'BuyAtSellAt';
 
+  // We set first state
   this.previousAction = 'sell';
   this.previousActionPrice = Infinity;
 }
@@ -28,10 +26,10 @@ method.log = function(candle) {
 }
 
 method.check = function(candle) {  
-  const buyat = settings.buyat; // amount of percentage of difference required
-  const sellat = settings.sellat; // amount of percentage of difference required
-  const stop_loss_pct = settings.stop_loss_pct; // amount of stop loss percentage
-  const sellat_up = settings.sellat_up; // amount of percentage from last buy if market goes up
+  const buyat = this.settings.buyat; // amount of percentage of difference required
+  const sellat = this.settings.sellat; // amount of percentage of difference required
+  const stop_loss_pct = this.settings.stop_loss_pct; // amount of stop loss percentage
+  const sellat_up = this.settings.sellat_up; // amount of percentage from last buy if market goes up
 
   if(this.previousAction === "buy") {
     // calculate the minimum price in order to sell
