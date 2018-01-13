@@ -34,7 +34,7 @@ method.check = function(candle) {
   if(this.previousAction === "buy") {
     // calculate the minimum price in order to sell
     const threshold = this.previousActionPrice * buyat;
-
+    log.debug(threshold)
     // calculate the stop loss price in order to sell
     const stop_loss = this.previousActionPrice * stop_loss_pct;
 
@@ -49,7 +49,6 @@ method.check = function(candle) {
   else if(this.previousAction === "sell") {
   // calculate the minimum price in order to buy
     const threshold = this.previousActionPrice * sellat;
-
   // calculate the price at which we should buy again if market goes up
     const sellat_up_price = this.previousActionPrice * sellat_up;
 

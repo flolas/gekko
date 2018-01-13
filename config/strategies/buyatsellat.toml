@@ -1,4 +1,8 @@
+#amount of percentage of difference(compared to the last observed price) required to buy
 buyat = 1.20
-sellat = 0.98
+#amount of percentage of difference required to sell 
+sellat = 0.98  
+#amount of stop loss percentage
 stop_loss_pct = 0.85
-sellat_up = 1.01
+#amount of percentage from last buy if market goes up
+sellat_up = 1.01 
